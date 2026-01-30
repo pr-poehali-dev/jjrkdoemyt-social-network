@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Get feed posts",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "posts": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create post requires auth",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "action": "create",
+        "content": "Test post"
+      },
+      "expectedStatus": 401,
+      "bodyMatcher": "partial"
+    }
+  ]
+}

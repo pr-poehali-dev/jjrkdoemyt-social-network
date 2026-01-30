@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Get shorts feed",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "shorts": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
